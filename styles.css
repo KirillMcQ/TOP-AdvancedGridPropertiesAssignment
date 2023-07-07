@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.container div {
+  padding: 15px;
+  font-size: 32px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: white;
+}
+
+.header {
+  background-color: #393f4d;
+}
+
+.menu ul,
+.menu li {
+  font-size: 16px;
+}
+
+.sidebar {
+  background-color: #C50208;
+}
+
+.sidebar .photo {
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 10px;
+}
+
+
+.sidebar .side-content {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.nav {
+  background-color: #C50208;
+}
+
+.nav ul li {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.article {
+  background-color: #bccbde;
+}
+
+.article p {
+  font-size: 18px;
+  font-family: sans-serif;
+  color: white;
+  text-align: left;
+}
+
+.article .card {
+  background-color: #FFFFFF;
+  color: black;
+  text-align: center;
+}
+
+.card p {
+  color: black;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.card .title {
+  font-size: 18px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #393f4d;
+}
+
+.footer p {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+/* Solution */
+
+.container {
+    height: 1vh; /* Makes the rows work :) Val doesn't matter*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 200px;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+.nav {
+    grid-column-start: 2;
+    grid-column-end: 6;
+}
+
+.nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.menu > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer {
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+.article {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    grid-row-start: 2;
+    grid-row-end: 6;
+    display: grid;
+    gap: 50px;
+}
